@@ -1,0 +1,11 @@
+// place your custom styles here
+.vp-sidebar {
+  box-shadow: 0 2px 8px var(--card-shadow);
+  padding-left: 0;
+}
+.theme-container.no-sidebar.has-toc .vp-page{
+  padding-inline-end: 0px;
+}
+.vp-sidebar > .vp-sidebar-links > li > .vp-sidebar-link {
+  font-size: 1em;
+}
