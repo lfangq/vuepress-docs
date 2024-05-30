@@ -1,6 +1,7 @@
 ---
-icon: user-secret
+icon: solar:cup-star-bold
 cover: /assets/images/cover3.jpg
+article: false
 ---
 
 # 介绍页

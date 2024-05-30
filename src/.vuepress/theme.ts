@@ -10,15 +10,17 @@ export default hopeTheme({
     url: "https://www.lfangq.top/",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "iconify",
 
   logo: "/assets/icon/logo.jpeg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/lfangq",
 
   docsDir: "src",
 
   fullscreen: true,
+
+  headerDepth: 5,
 
   // 打印
   print: false,
@@ -57,11 +59,18 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
+  hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {
-    blog: true,
+    blog: {
+      filter: (page) => {
+        const restrictedPaths = ["/demos/", "/documents/", "README.md"];
+        const { path } = page;
+        return !restrictedPaths.some(restrictedPath => path.includes(restrictedPath));
+      },
+      excerptLength: 0
+    },
 
     // 启用之前需安装 @waline/client
     // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
@@ -69,6 +78,15 @@ export default hopeTheme({
     //   provider: "Waline",
     //   serverURL: "https://waline-comment.vuejs.press",
     // },
+    comment: {
+      // 配置选项
+      provider: 'Giscus',
+      repo: 'lfangq/blog-giscus',
+      repoId: 'R_kgDOMB_YWw',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOMB_YW84CfrTl',
+      mapping: 'pathname'
+    },
 
     components: {
       components: ["Badge", "VPCard"],
@@ -106,6 +124,7 @@ export default hopeTheme({
       tabs: true,
       tasklist: true,
       vPre: true,
+      markmap: true,
 
       // 在启用之前安装 chart.js
       // chart: true,

@@ -9,3 +9,17 @@
 .vp-sidebar > .vp-sidebar-links > li > .vp-sidebar-link {
   font-size: 1em;
 }
+.vp-navbar .vp-nav-item .vp-link .icon {
+  font-size: 1.3em;
+}
+.vp-navbar .vp-dropdown-title .icon {
+  font-size: 1.3em;
+}
+
+.vp-navbar .vp-dropdown-item .icon {
+  font-size: 1em !important;
+}
+
+.vp-card-desc {
+  color: var(--vp-card-color);
+}

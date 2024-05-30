@@ -1,5 +1,5 @@
 ---
-title: 笔记
+title: TypeScript
 index: false
 breadcrumbExclude: true
 article: false

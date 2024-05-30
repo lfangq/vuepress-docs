@@ -1,7 +1,7 @@
 ---
 title: 示例
 index: false
-icon: laptop-code
+icon: solar:atom-bold
 category:
   - 示例
 ---

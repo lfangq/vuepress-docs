@@ -1,7 +1,7 @@
 ---
-title: Node命令
+title: Git命令
 date: 2024-05-13 17:20:13
-icon: code
+icon: vscode-icons:file-type-git
 index: true
 category:
   - 技术文档
