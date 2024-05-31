@@ -20,7 +20,7 @@ export default hopeTheme({
 
   fullscreen: true,
 
-  headerDepth: 5,
+  externalLinkIcon: true,
 
   // 打印
   print: false,
@@ -147,7 +147,7 @@ export default hopeTheme({
       // mathjax: true,
 
       // 在启用之前安装 mermaid
-      // mermaid: true,
+      mermaid: true,
 
       // playground: {
       //   presets: ["ts", "vue"],
