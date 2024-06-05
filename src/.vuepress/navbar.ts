@@ -57,6 +57,6 @@ export default navbar([
     icon: "solar:code-scan-bold",
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
-    children: ["README.md"]
+    children: ["学习路线图.md"]
   }
 ]);
