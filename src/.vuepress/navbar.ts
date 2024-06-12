@@ -18,25 +18,21 @@ export default navbar([
     children: [
       {
         text: "设计模式",
-        icon: "solar:cpu-bold-duotone",
         prefix: "/design-mode/",
         link: "/notes/design-mode/1.前言.md"
       },
       {
         text: "React",
-        icon: "vscode-icons:file-type-reactts",
         prefix: "/react/",
         link: "/notes/react/00.React思维导图.md"
       },
       {
         text: "TypeScript",
-        icon: "vscode-icons:folder-type-typescript-opened",
         prefix: "/typescript/",
         link: "/notes/typescript/01.简介.md"
       },
       {
         text: "谷歌插件",
-        icon: "ph:google-chrome-logo-bold",
         prefix: "/chrome-tools/",
         link: "/notes/chrome-tools/01.谷歌插件开发入门示例.md"
       }
@@ -57,6 +53,6 @@ export default navbar([
     icon: "solar:code-scan-bold",
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
-    children: ["学习路线图.md"]
+    children: ["站点导航.md", "学习路线图.md"]
   }
 ]);

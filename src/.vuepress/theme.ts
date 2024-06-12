@@ -10,6 +10,8 @@ export default hopeTheme({
     url: "https://www.lfangq.top/",
   },
 
+  copyright: '@Copyright 2018 Lfangq',
+
   iconAssets: "iconify",
 
   logo: "/assets/icon/logo.jpeg",
@@ -63,6 +65,8 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+    searchPro: true,
+    copyright: true,
     blog: {
       filter: (page) => {
         const restrictedPaths = ["/demos/", "/documents/", "README.md"];
