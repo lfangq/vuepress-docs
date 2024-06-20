@@ -57,3 +57,21 @@ html[data-theme=light] {
   width: 100%;
   height: 100%;
 }
+
+// :::details 样式
+.hint-container.details {
+  padding: 1rem;
+}
+
+.hint-container.details .language-typescript.line-numbers-mode{
+  margin: 0 -1rem;
+}
+
+.hint-container.details[open] > summary {
+  margin-bottom: 0;
+}
+
+.hint-container.details summary {
+  margin: 0;
+  padding-block: 0;
+}

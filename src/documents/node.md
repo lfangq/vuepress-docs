@@ -1,8 +1,98 @@
 ---
-title: Node命令
+title: Node常用命令
 date: 2024-05-13 17:20:13
 icon: vscode-icons:file-type-nodemon
 index: true
 category:
   - 技术文档
 ---
+
+[npm官网文档](https://docs.npmjs.com/) | [npm中文网文档](https://npm.nodejs.cn/cli/v8/commands/npm)
+
+### 查看某个包的依赖项，多少个版本，协议，最近版本号等信息
+```bash
+npm info [package]
+```
+
+### 查看某个包的所有版本
+```bash
+npm view [package] versions
+```
+
+### 查看某个包最新版本
+```bash
+npm view [package] version
+```
+
+### 安装指定版本的包(如1.0.0版本)
+```bash
+npm install xxx@1.0.0
+```
+
+### 安装最新版本的包
+```bash
+npm install xxx@latest
+```
+
+### 查看本地是否全局安装某个包，以及包版本
+```bash
+npm ls xxx -g
+```
+
+### 查看本地全局安装的所有包
+```bash
+npm ls -g  // 会返回所有的包，包括该包的依赖，比较难以查看，特殊情况会用到
+npm list -g --depth 0  // 返回全局安装的包，不显示其依赖包
+```
+
+### npm install xxx --save与–save-dev区别
+```bash
+npm i xxx --save // dependencies 项目运行时需要的依赖
+npm i xxx --save-dev // devDependencies 则是开发时需要的依赖
+```
+
+### 清除缓存
+```bash
+npm cache clean --force
+```
+
+### 查看npm源地址
+```bash
+npm config get registry
+```
+
+### 查看缓存地址
+```bash
+npm config get cache
+```
+
+### 查看当前npm配置
+```bash
+npm config get
+```
+
+### 设置npm默认源为淘宝镜像
+```bash
+npm config set registry https://registry.npm.taobao.org
+```
+
+### 安装某个包时使用淘宝镜像
+```bash
+npm config set xxx "https://npm.taobao.org/mirrors/xxx"
+// 例如
+npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
+npm config set sharp_binary_host "https://npm.taobao.org/mirrors/sharp"
+npm config set sharp_libvips_binary_host "https://npm.taobao.org/mirrors/sharp-libvips"
+```
+
+### 安装某个包时使用淘宝镜像
+```bash
+npm_config_sass_binary_site=https://npm.taobao.org/mirrors/node-sass
+npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"
+npm_config_sharp_libvips_binary_host="https://npm.taobao.org/mirrors/sharp-libvips"
+```
+
+### 该次安装某个包时使用淘宝镜像
+```bash
+npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+```
