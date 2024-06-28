@@ -4,39 +4,31 @@ import sidebar from "./sidebar.js";
 
 export default hopeTheme({
   hostname: "https://www.lfangq.top/",
-
   author: {
     name: "Lfangq",
     url: "https://www.lfangq.top/",
   },
-
   copyright: '@Copyright 2018 Lfangq',
-
   iconAssets: "iconify",
-
   logo: "/assets/icon/logo.jpeg",
-
   repo: "https://github.com/lfangq",
-
   docsDir: "src",
-
   fullscreen: true,
-
   externalLinkIcon: true,
-
+  navbarLayout: {
+    start: ["Brand"],
+    center: [],
+    end: ["Links", "Repo", "Outlook", "Search"],
+  },
   // 打印
   print: false,
-
   // 导航栏
   navbar,
-
   // 侧边栏
   sidebar,
-
   // 页脚
   footer: "个人博客网站",
   displayFooter: true,
-
   // 博客相关
   blog: {
     description: "一个前端开发者",
@@ -47,22 +39,18 @@ export default hopeTheme({
       GitHub: "https://github.com/lfangq",
     },
   },
-
   // 加密配置
   encrypt: {
     config: {
       "/demo/encrypt.html": ["758924"],
     },
   },
-
   // 多语言配置
   metaLocales: {
     editLink: "在 GitHub 上编辑此页",
   },
-
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   hotReload: true,
-
   // 在这里配置主题提供的插件
   plugins: {
     searchPro: true,

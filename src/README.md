@@ -1,12 +1,11 @@
 ---
 title: 主页
 home: true
-name: Lfangq's Blog
-welcome: Welcome to
-titles: ['']
-bgImage: /assets/images/bg.jpeg
-avatar: false
-portfolio: true
-footer: false
+heroText: Lfangq's Blog
+tagline: 博客 & 文档✨
+bgImage: /assets/images/bg.svg
+bgImageStyle:
+  background-attachment: fixed
 heroFullScreen: true
+footer: false
 ---

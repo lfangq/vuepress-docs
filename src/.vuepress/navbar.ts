@@ -3,17 +3,27 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   {
     text: "主页",
-    icon: "solar:home-bold-duotone",
+    // icon: "solar:home-bold-duotone",
     link: "/",
   },
   {
     text: "博客",
-    icon: "ion:newspaper",
+    // icon: "ion:newspaper",
     link: "/posts/",
   },
   {
+    text: "技术文档",
+    // icon: "solar:palette-bold",
+    link: "/documents/",
+  },
+  {
+    text: "示例",
+    // icon: "solar:atom-bold",
+    link: "/demos/",
+  },
+  {
     text: "笔记",
-    icon: "solar:clipboard-list-bold",
+    // icon: "solar:clipboard-list-bold",
     prefix: "/notes/",
     children: [
       {
@@ -39,20 +49,10 @@ export default navbar([
     ]
   },
   {
-    text: "技术文档",
-    icon: "solar:palette-bold",
-    link: "/documents/",
-  },
-  {
-    text: "示例",
-    icon: "solar:atom-bold",
-    link: "/demos/",
-  },
-  {
     text: "更多",
-    icon: "solar:code-scan-bold",
+    // icon: "solar:code-scan-bold",
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
-    children: ["站点导航.md", "学习路线图.md"]
+    children: ["站点导航.md", "学习路线图.md", "常用的前端轮子.md"]
   }
 ]);

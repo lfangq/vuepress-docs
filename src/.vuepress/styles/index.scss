@@ -1,9 +1,45 @@
 // place your custom styles here
+// 去除滚动条
+:root {
+  scrollbar-width: none !important;
+}
+
+html[data-theme=dark] {
+  --navbar-bg-color: #16161799;
+  --sidebar-bg-color: #16161799;
+  --bg-color-float: #23262f;
+  --theme-container-background-image: rgba(148, 142, 142, 0.05);
+}
+
+html[data-theme=light] {
+  --navbar-bg-color: #f6f7f9b0;
+  --sidebar-bg-color: #ffffff;
+  --bg-color-float: #f6f7f9;
+  --theme-container-background-image: rgba(50, 0, 0, 0.05);
+}
+
+.theme-container .vp-page {
+  background-image: linear-gradient(90deg, var(--theme-container-background-image) 3%, #ffffff00 3%), linear-gradient(360deg, var(--theme-container-background-image) 3%, #ffffff00 3%) !important;
+  background-size: 20px 20px !important;
+  background-position: center center !important;
+}
+
 .vp-sidebar {
   box-shadow: 0 2px 8px var(--card-shadow);
   padding-left: 0;
 }
-.theme-container.no-sidebar.has-toc .vp-page{
+
+.vp-nav-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.8rem;
+  font-size: .8rem !important;
+  font-weight: bold;
+}
+
+.theme-container.no-sidebar.has-toc .vp-page {
   padding-inline-end: 0px;
 }
 
@@ -17,16 +53,6 @@
   padding: .5rem;
 }
 
-html[data-theme=dark] {
-    --navbar-bg-color: #0a0a0a;
-    --sidebar-bg-color: #23262f;
-}
-
-html[data-theme=light] {
-    --navbar-bg-color: #f6f7f9;
-    --sidebar-bg-color: #ffffff;
-}
-
 .markmap-wrapper .markmap-svg {
   min-height: 660px;
 }
@@ -37,7 +63,7 @@ html[data-theme=light] {
 }
 
 // 侧边栏样式
-.vp-sidebar > .vp-sidebar-links > li > .vp-sidebar-link {
+.vp-sidebar>.vp-sidebar-links>li>.vp-sidebar-link {
   font-size: .95rem;
   font-weight: 500;
 }
@@ -48,14 +74,12 @@ html[data-theme=light] {
 }
 
 // 首页样式
-.vp-portfolio-home, .theme-hope-content.vp-portfolio-content {
+.vp-project-home {
   padding: 0 !important;
 }
 
-// avatar样式
-.vp-blogger-avatar {
-  width: 100%;
-  height: 100%;
+.vp-hero-info-wrapper.fullscreen {
+  height: 100vh !important;
 }
 
 // :::details 样式
@@ -63,15 +87,42 @@ html[data-theme=light] {
   padding: 1rem;
 }
 
-.hint-container.details .language-typescript.line-numbers-mode{
+.hint-container.details .language-typescript.line-numbers-mode {
   margin: 0 -1rem;
 }
 
-.hint-container.details[open] > summary {
+.hint-container.details[open]>summary {
   margin-bottom: 0;
 }
 
 .hint-container.details summary {
   margin: 0;
   padding-block: 0;
+}
+
+.vp-portfolio-avatar,
+.vp-portfolio-avatar img {
+  width: 100vw;
+}
+
+.vp-portfolio-container {
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 12rem;
+}
+
+.vp-portfolio-name {
+  margin-bottom: 1.5rem !important;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+  --tw-gradient-from: #5D67E8 !important;
+  --tw-gradient-to: rgb(93 103 232 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+  --tw-gradient-to: #ef4444 !important;
+  text-align: left !important;
+  font-size: 3rem !important;
+  line-height: 1 !important;
+  line-height: 1.25 !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

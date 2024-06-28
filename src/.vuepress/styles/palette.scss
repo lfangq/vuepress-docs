@@ -3,20 +3,29 @@ $bg-color: (
   light: #ffffff,
   dark: #1b1b1f,
 );
+
 $content-width: 1050px;
+
 $vp-card-color: #ffffff;
+
 $vp-card-bg-color: #084879;
+
 $sidebar-width: 18.75rem;
-$bg-color-float: #23262f;
+
 $text-color: (
   light: #494a4e,
-  dark: #e9e9e9,
+  dark: #b5b2b2,
 );
+
 $grey-dark: (
   light: #17181c,
   dark: #f7ecec,
 );
+
 $grey-light: (
   light: #353333,
   dark: #b3c7ff,
 );
+
+$font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
+$font-family-heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
