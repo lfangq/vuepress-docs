@@ -24,6 +24,10 @@ html[data-theme=light] {
   background-position: center center !important;
 }
 
+.vp-navbar {
+  background-image: linear-gradient(90deg, var(--theme-container-background-image) 3%, var(--theme-container-background-image) 50%) !important;
+}
+
 .vp-sidebar {
   box-shadow: 0 2px 8px var(--card-shadow);
   padding-left: 0;
