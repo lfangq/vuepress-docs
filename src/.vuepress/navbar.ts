@@ -45,6 +45,11 @@ export default navbar([
         text: "谷歌插件",
         prefix: "/chrome-tools/",
         link: "/notes/chrome-tools/01.谷歌插件开发入门示例.md"
+      },
+      {
+        text: "Element-UI小技巧",
+        prefix: "/element-ui/",
+        link: "/notes/element-ui.md"
       }
     ]
   },
