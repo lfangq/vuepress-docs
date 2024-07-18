@@ -1,8 +1,6 @@
 ---
 title:  this指向
 date: 2024-04-01 16:58:06
-categories:
-  - JavaScript
 tags:
   - JavaScript
 ---

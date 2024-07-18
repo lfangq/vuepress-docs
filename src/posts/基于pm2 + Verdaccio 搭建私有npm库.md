@@ -1,25 +1,23 @@
 ---
 title: 基于pm2 + Verdaccio 搭建私有npm库
 date: 2022-11-01 17:53:12
-categories:
-  - Node
 tags:
   - Node
 ---
 
 ## 一、安装Verdaccio
 
-### 1. 全局安装 [Verdaccio](https://verdaccio.org/zh-CN/docs/what-is-verdaccio)：
+1. 全局安装 [Verdaccio](https://verdaccio.org/zh-CN/docs/what-is-verdaccio)：
 
-```node
+```bash
 npm i -g verdaccio
 ```
 
-### 2. 启动Verdaccio
+2. 启动Verdaccio
 
-在终端中输入 verdaccio 命令启动 Verdaccio：
+在终端中输入 `verdaccio` 命令启动 Verdaccio：
 
-```node
+```bash
 verdaccio
 ```
 
@@ -36,7 +34,7 @@ info --- plugin successfully loaded: verdaccio-audit
 warn --- http address - http://localhost:4873/ - verdaccio/5.25.0
 ```
 
-### 3. 修改配置
+3. 修改配置
 
 要配置发布包、查看包、删除包相关的权限，可修改`packages`下的属性:
 
@@ -70,7 +68,8 @@ packages:
     proxy: npmjs
 ```
 
-禁止任何人都可以通过 npm adduser 命令注册用户, 在`auth`=>`htpasswd`添加`max_users`：
+禁止任何人都可以通过 `npm adduser` 命令注册用户, 在`auth`=>`htpasswd`添加`max_users`:
+
 ```yaml
 auth:
   htpasswd:
@@ -81,7 +80,7 @@ auth:
     max_users: -1
 ```
 
-完整配置文件如下：
+:::details 完整配置文件
 ```yaml
 # 存放软件所有软件包的目录
 storage: ../storage
@@ -165,6 +164,7 @@ logs: { type: stdout, format: pretty, level: http }
 listen:
   - 0.0.0.0:4873
 ```
+:::
 
 ## 二、部署
 
@@ -201,24 +201,23 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED         ST
 6aac1ea8707a   verdaccio/verdaccio   "uid_entrypoint /bin…"   2 minutes ago   Up 2 minutes   0.0.0.0:4873->4873/tcp, :::4873->4873/tcp   verdaccio
 ```
 
-这样我们就完成了verdaccio在docker上的部署，其中我们将~/docker/verdaccio这个文件夹挂载到docker的/verdaccio/conf文件夹，verdaccio在启动时会自动寻找/verdaccio/conf/config.yaml文件作为配置。
+这样我们就完成了verdaccio在docker上的部署，其中我们将`~/docker/verdaccio`这个文件夹挂载到`docker的/verdaccio/conf`文件夹，verdaccio在启动时会自动寻找`/verdaccio/conf/config.yaml`文件作为配置。
 
 :::warning
-
-在虚拟器中运行docker, 如果本地和外部都不能访问verdaccio网页，重启一下docker服务；
-
+在虚拟器中运行docker, 如果本地和外部都不能访问verdaccio网页，重启一下docker服务。
 :::
 
 ### 2. pm2部署
 
 [pm2](https://pm2.keymetrics.io/)的部署相对于docker需要安装node。但是相对的部署起来会更快捷，可以根据自己需要选择。
 
+PM2是一个用于Node.js应用程序的生产过程管理器，具有内置的负载均衡器。
+
 ```bash
 # 全局安装verdaccio和pm2
 npm i -g verdaccio pm2
 
 # 通过pm2启动verdaccio
-
 pm2 start verdaccio
 ```
 
@@ -227,27 +226,23 @@ pm2 start verdaccio
 :::
 
 
-pm2命令：
+pm2常用命令：
 
-```bash
-PM2是一个用于Node.js应用程序的生产过程管理器，具有内置的负载均衡器。
+启动并守护任何应用程序： `pm2 start app.js`
 
-启动并守护任何应用程序： $ pm2 start app.js
+停止应用程序：`pm2 stop app.js`
 
-停止应用程序：$ pm2 stop app.js
+负载平衡4个api.js实例： `pm2 start api.js -i 4`
 
-负载平衡4个api.js实例： $ pm2 start api.js -i 4
+在生产环境中进行监控： `pm2 monitor`
 
-在生产环境中进行监控： $ pm2 monitor
+使pm2在服务器重新启动时自动启动： `pm2 startup`
 
-使pm2在服务器重新启动时自动启动： $ pm2 startup
+要查看PM2启动的服务的监听地址和端口: `pm2 show <app_name>`
 
-要查看PM2启动的服务的监听地址和端口: $ pm2 show <app_name>
+列出所有正在运行的应用程序及其相关信息: `pm2 list`
 
-列出所有正在运行的应用程序及其相关信息: $ pm2 list
-
-要进一步了解，请访问： http://pm2.io/
-```
+[pm2文档](http://pm2.io/)
 
 ## 三、管理npm仓库源
 
@@ -276,7 +271,7 @@ $ nrm use verdaccio
 
 ### 1. 注册
 
-```
+```bash
 # 注册用户，这里因为方便演示，所以没有关闭注册。Username：用户名  Password：密码
 $ npm adduser
 npm notice Log in on http://{地址}:4873/
@@ -296,6 +291,7 @@ Username: yourusername
 Password:
 Email: (this IS public) xxxxxx@qq.com
 Logged in as yourusername on http://{地址}:4873/
+
 # 查看当前登录用户
 $ npm who am i
 yourusername
@@ -305,7 +301,7 @@ yourusername
 
 ```bash
 # 发布当前包
-$ npm publish
+npm publish
 ```
 
 :::warning

@@ -1,9 +1,11 @@
 ---
-title: Node 常用命令
+title: Node常用命令
 date: 2024-05-13 17:20:13
 index: true
 category:
   - 技术文档
+tags:
+  - Node
 ---
 
 [npm官网文档](https://docs.npmjs.com/) | [npm中文网文档](https://npm.nodejs.cn/cli/v8/commands/npm)
@@ -72,26 +74,31 @@ npm config get
 
 ### 设置npm默认源为淘宝镜像
 ```bash
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com
 ```
 
 ### 安装某个包时使用淘宝镜像
 ```bash
-npm config set xxx "https://npm.taobao.org/mirrors/xxx"
+npm config set xxx "https://registry.npmmirror.com/xxx"
+
 // 例如
-npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
-npm config set sharp_binary_host "https://npm.taobao.org/mirrors/sharp"
-npm config set sharp_libvips_binary_host "https://npm.taobao.org/mirrors/sharp-libvips"
+npm config set sass_binary_site "https://registry.npmmirror.com/node-sass/"
+
+npm config set sharp_binary_host "https://registry.npmmirror.com/sharp"
+
+npm config set sharp_libvips_binary_host "https://registry.npmmirror.com/sharp-libvips"
 ```
 
 ### 安装某个包时使用淘宝镜像
 ```bash
-npm_config_sass_binary_site=https://npm.taobao.org/mirrors/node-sass
-npm_config_sharp_binary_host="https://npm.taobao.org/mirrors/sharp"
-npm_config_sharp_libvips_binary_host="https://npm.taobao.org/mirrors/sharp-libvips"
+npm_config_sass_binary_site="https://registry.npmmirror.com/node-sass"
+
+npm_config_sharp_binary_host="https://registry.npmmirror.com/sharp"
+
+npm_config_sharp_libvips_binary_host="https://registry.npmmirror.com/sharp-libvips"
 ```
 
 ### 该次安装某个包时使用淘宝镜像
 ```bash
-npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+npm i node-sass --sass_binary_site="https://registry.npmmirror.com/node-sass/"
 ```

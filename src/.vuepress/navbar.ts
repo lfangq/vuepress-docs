@@ -39,7 +39,7 @@ export default navbar([
       {
         text: "TypeScript",
         prefix: "/typescript/",
-        link: "/notes/typescript/01.简介.md"
+        link: "/notes/typescript/01.前言.md"
       },
       {
         text: "谷歌插件",
@@ -58,6 +58,15 @@ export default navbar([
     // icon: "solar:code-scan-bold",
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
-    children: ["站点导航.md", "学习路线图.md", "常用的前端轮子.md"]
+    children: [
+      "站点导航.md",
+      "学习路线图.md",
+      "常用的前端轮子.md",
+      {
+        text: "面试总结",
+        prefix: "/interview-summary/",
+        link: "/more/interview-summary/html/01.DOCTYPE.md"
+      }
+    ]
   }
 ]);

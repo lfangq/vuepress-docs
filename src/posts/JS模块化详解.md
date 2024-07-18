@@ -1,8 +1,6 @@
 ---
 title: JS模块化详解
 date: 2023-07-03 14:14:35
-categories:
-  - JavaScript
 tags:
   - JavaScript
 ---

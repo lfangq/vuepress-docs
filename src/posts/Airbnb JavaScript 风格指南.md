@@ -1,10 +1,8 @@
 ---
 title:  Airbnb JavaScript 风格指南
 date: 2023-05-22 17:12:15
-categories:
-  - JavaScript
 tags:
-  - JavaScript
+  - 代码规范
 ---
 
 ### Types

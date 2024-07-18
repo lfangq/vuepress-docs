@@ -9,6 +9,12 @@ html[data-theme=dark] {
   --sidebar-bg-color: #16161799;
   --bg-color-float: #23262f;
   --theme-container-background-image: rgba(148, 142, 142, 0.05);
+  --warning-bg-color: #4d380099;
+
+  code {
+    background: #5d67e852;
+    color: #4bcdde;
+  }
 }
 
 html[data-theme=light] {
@@ -16,11 +22,11 @@ html[data-theme=light] {
   --sidebar-bg-color: #ffffff;
   --bg-color-float: #f6f7f9;
   --theme-container-background-image: rgba(50, 0, 0, 0.05);
-}
 
-code {
-  background: #5d67e894 !important;
-  color: #f1ecec !important;
+  code {
+    background: #5d66e81f;
+    color: #3605f4;
+  }
 }
 
 .theme-container .vp-page {
