@@ -3,27 +3,27 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   {
     text: "主页",
-    // icon: "solar:home-bold-duotone",
+    icon: "solar:home-bold-duotone",
     link: "/",
   },
   {
     text: "博客",
-    // icon: "ion:newspaper",
+    icon: "ion:newspaper",
     link: "/posts/",
   },
   {
     text: "技术文档",
-    // icon: "solar:palette-bold",
+    icon: "solar:palette-bold",
     link: "/documents/",
   },
   {
     text: "示例",
-    // icon: "solar:atom-bold",
+    icon: "solar:atom-bold",
     link: "/demos/",
   },
   {
     text: "笔记",
-    // icon: "solar:clipboard-list-bold",
+    icon: "solar:clipboard-list-bold",
     prefix: "/notes/",
     children: [
       {
@@ -34,7 +34,7 @@ export default navbar([
       {
         text: "React",
         prefix: "/react/",
-        link: "/notes/react/00.React思维导图.md"
+        link: "/notes/react/01.简介.md"
       },
       {
         text: "TypeScript",
@@ -55,7 +55,7 @@ export default navbar([
   },
   {
     text: "更多",
-    // icon: "solar:code-scan-bold",
+    icon: "solar:code-scan-bold",
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
     children: [

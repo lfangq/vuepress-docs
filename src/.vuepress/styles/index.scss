@@ -2,6 +2,7 @@
 // 去除滚动条
 :root {
   scrollbar-width: none !important;
+  --back-to-top-icon: url("/assets/icon/earth.svg");
 }
 
 html[data-theme=dark] {

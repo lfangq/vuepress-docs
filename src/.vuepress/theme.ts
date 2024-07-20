@@ -8,6 +8,7 @@ export default hopeTheme({
     name: "Lfangq",
     url: "https://www.lfangq.top/",
   },
+  favicon: "/assets/icon/favicon.ico",
   copyright: '@Copyright 2018 Lfangq',
   iconAssets: "iconify",
   logo: "/assets/icon/logo.jpeg",
