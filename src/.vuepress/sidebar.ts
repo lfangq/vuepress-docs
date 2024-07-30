@@ -5,6 +5,7 @@ export default sidebar({
   "/notes/react/": "structure",
   "/notes/typescript/": "structure",
   "/notes/chrome-tools/": "structure",
+  "/notes/webpack-notes/": "structure",
   "/documents/": "structure",
   "/demos/": "structure",
   "/more/interview-summary/": [{

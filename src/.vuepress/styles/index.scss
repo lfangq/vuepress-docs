@@ -2,7 +2,11 @@
 // 去除滚动条
 :root {
   scrollbar-width: none !important;
-  --back-to-top-icon: url("/assets/icon/earth.svg");
+  // --back-to-top-icon: url("/assets/icon/earth.svg");
+}
+
+.vp-article-list:first-child {
+  margin-top: calc(5px - var(--navbar-height));
 }
 
 html[data-theme=dark] {
@@ -11,6 +15,13 @@ html[data-theme=dark] {
   --bg-color-float: #23262f;
   --theme-container-background-image: rgba(148, 142, 142, 0.05);
   --warning-bg-color: #4d380099;
+
+  blockquote {
+    border-color: #4bcdde;
+    color: #d5cece;
+    font-weight: 900;
+    background: #ffffff14;
+  }
 
   code {
     background: #5d67e852;
@@ -28,6 +39,32 @@ html[data-theme=light] {
     background: #5d66e81f;
     color: #3605f4;
   }
+}
+
+// 详情展开样式
+.hint-container.details summary::before,
+.hint-container.details summary::after {
+  inset-inline-start: 0;
+}
+
+.hint-container.details summary {
+  padding-inline: 2rem 1.5rem;
+}
+
+// :::details 样式
+.hint-container.details {
+  padding: 1rem;
+  border: 2px solid #007157;
+  background: #00ff371a;
+}
+
+.hint-container.details[open]>summary {
+  margin-bottom: 0;
+}
+
+.hint-container.details summary {
+  margin: 0;
+  padding-block: 0;
 }
 
 .theme-container .vp-page {
@@ -96,24 +133,6 @@ html[data-theme=light] {
 
 .vp-hero-info-wrapper.fullscreen {
   height: 100vh !important;
-}
-
-// :::details 样式
-.hint-container.details {
-  padding: 1rem;
-}
-
-.hint-container.details .language-typescript.line-numbers-mode {
-  margin: 0 -1rem;
-}
-
-.hint-container.details[open]>summary {
-  margin-bottom: 0;
-}
-
-.hint-container.details summary {
-  margin: 0;
-  padding-block: 0;
 }
 
 .vp-portfolio-avatar,

@@ -42,6 +42,11 @@ export default navbar([
         link: "/notes/typescript/01.前言.md"
       },
       {
+        text: "Webpack",
+        prefix: "/webpack/",
+        link: "/notes/webpack-notes/01.前言.md"
+      },
+      {
         text: "谷歌插件",
         prefix: "/chrome-tools/",
         link: "/notes/chrome-tools/01.谷歌插件开发入门示例.md"

@@ -6,6 +6,9 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "Lfangq",
   description: "Lfangq的博客",
+  // head: [
+  //    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+  // ],
   markdown: {
     headers: {
       // 用到哪一级就提取哪一级

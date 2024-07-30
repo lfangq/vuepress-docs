@@ -1,10 +1,10 @@
 // you can change colors here
-@font-face {
-  font-family: 'Punctuation SC';
-  src: url('/fonts/PingFangSC-Light.ttf'); //你的资源目录
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Punctuation SC';
+//   src: url('/fonts/PingFangSC-Light.ttf'); //你的资源目录
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 $bg-color: (
   light: #ffffff,
@@ -22,7 +22,7 @@ $sidebar-width: 18.75rem;
 // 内容字体颜色
 $text-color: (
   light: #494a4e,
-  dark: #d5cece,
+  dark: #adadad,
 );
 
 $grey-dark: (
@@ -36,7 +36,7 @@ $grey-light: (
 );
 
 // 内容字体
-$font-family: '"Punctuation SC","Inter",ui-sans-serif,system-ui,"PingFang SC","Noto Sans CJK SC","Noto Sans SC","Heiti SC","Microsoft YaHei","DengXian",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" ';
+$font-family: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
 
 // 标题字体
-$font-family-heading: '"Punctuation SC","Inter",ui-sans-serif,system-ui,"PingFang SC","Noto Sans CJK SC","Noto Sans SC","Heiti SC","Microsoft YaHei","DengXian",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" ';
+$font-family-heading: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
