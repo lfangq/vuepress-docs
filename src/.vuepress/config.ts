@@ -6,9 +6,9 @@ export default defineUserConfig({
   lang: "zh-CN",
   title: "Lfangq",
   description: "Lfangq的博客",
-  // head: [
-  //    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-  // ],
+  head: [
+     ["script", { rel: "CryptoJS", src: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" }],
+  ],
   markdown: {
     headers: {
       // 用到哪一级就提取哪一级

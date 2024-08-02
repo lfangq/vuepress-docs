@@ -7,72 +7,61 @@ category:
   - 示例
 ---
 
-::: vue-playground AES/DES加密解密示例
-
-@file App.vue
+::: vue-demo AES/DES 加密解密示例
 
 ```vue
 <template>
   <div class="container">
     <div>
       <label>密钥: </label>
-      <input v-model="aseKey" />
+      <input v-model="aseKey" placeholder="请输入8位的密钥" />
     </div>
     <div>
       <label>内容: </label>
-      <input v-model="content" />
+      <input v-model="content" placeholder="请输入加密/解密内容"/>
     </div>
-    <div>{{ msg }}</div>
+    <div class="content">{{ msg }}</div>
     <div class="btn-container">
-      <button  @click="handleEncrypt">加密</button>
+      <button @click="handleEncrypt">加密</button>
       <button @click="handleDecrypt">解密</button>
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from "vue";
-
-// 引入外部js文件
-function loadJs(src) {
-  return new Promise((resolve, reject) => {
-    let script = document.createElement('script');
-    script.type = "text/javascript";
-    script.src = src;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      resolve();
+<script>
+const { ref } = Vue;
+export default {
+  setup(props) {
+    const msg = ref("加密/解密内容");
+    const aseKey = ref("");
+    const content = ref("");
+    return {
+      msg,
+      aseKey,
+      content,
+    };
+  },
+  methods: {
+    handleEncrypt() {
+      if(!this.aseKey || !this.content){
+        confirm("请输入密钥和内容");
+        return;
+      }
+      this.msg = CryptoJS.AES.encrypt(this.content, CryptoJS.enc.Utf8.parse(this.aseKey),{
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7,
+      }).toString();
+    },
+    handleDecrypt () {
+      if(!this.aseKey || !this.content){
+        confirm("请输入密钥和内容");
+        return;
+      }
+      this.msg = CryptoJS.AES.decrypt(this.content, CryptoJS.enc.Utf8.parse(this.aseKey), {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7,
+      }).toString(CryptoJS.enc.Utf8);
     }
-    script.onerror = () => {
-      reject();
-    }
-  })
-}
-loadJs("https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js");
-
-const msg = ref("加密/解密内容");
-const aseKey = ref("");
-const content = ref("");
-
-const handleEncrypt = () => {
-  msg.value = CryptoJS.AES.encrypt(
-    content.value,
-    CryptoJS.enc.Utf8.parse(aseKey.value),
-    {
-      mode: CryptoJS.mode.ECB,
-      padding: CryptoJS.pad.Pkcs7
-    }
-  ).toString();
-};
-const handleDecrypt = () => {
-  msg.value = CryptoJS.AES.decrypt(
-    content.value,
-    CryptoJS.enc.Utf8.parse(aseKey.value),
-    {
-      mode: CryptoJS.mode.ECB,
-      padding: CryptoJS.pad.Pkcs7
-    }
-  ).toString(CryptoJS.enc.Utf8);
+  },
 };
 </script>
 <style>
@@ -84,13 +73,16 @@ const handleDecrypt = () => {
   width: 100%;
   height: 100%;
   text-align: center;
-}
-.btn-container {
-  button {
-    margin: 20px 10px;
+  input {
+    margin: 10px 0;
   }
+}
+.content {
+  margin-top: 10px;
+}
+.btn-container button {
+  margin: 20px 10px;
 }
 </style>
 ```
-
 :::

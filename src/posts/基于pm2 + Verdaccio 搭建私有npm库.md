@@ -2,7 +2,7 @@
 title: 基于pm2 + Verdaccio 搭建私有npm库
 date: 2022-11-01 17:53:12
 tags:
-  - Node
+  - node
 ---
 
 ## 一、安装Verdaccio

@@ -58,7 +58,8 @@ export default hopeTheme({
     copyright: true,
     blog: {
       filter: (page) => {
-        const restrictedPaths = ["/demos/", "/documents/", "README.md"];
+        // const restrictedPaths = ["/demos/", "/documents/", "README.md"];
+        const restrictedPaths = ["README.md"];
         const { path } = page;
         return !restrictedPaths.some(restrictedPath => path.includes(restrictedPath));
       },
