@@ -43,7 +43,7 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["758924"],
+      // "/more/计划.html": ["758924"],
     },
   },
   // 多语言配置

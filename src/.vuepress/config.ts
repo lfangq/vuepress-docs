@@ -7,7 +7,7 @@ export default defineUserConfig({
   title: "Lfangq",
   description: "Lfangq的博客",
   head: [
-     ["script", { rel: "CryptoJS", src: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" }],
+    ["script", { rel: "CryptoJS", src: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" }],
   ],
   markdown: {
     headers: {

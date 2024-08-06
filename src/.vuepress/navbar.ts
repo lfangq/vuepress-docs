@@ -64,6 +64,7 @@ export default navbar([
     prefix: "/more/",
     link: "https://theme-hope.vuejs.press/zh/",
     children: [
+      "计划.md",
       "站点导航.md",
       "学习路线图.md",
       "常用的前端轮子.md",

@@ -40,3 +40,24 @@ $font-family: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hir
 
 // 标题字体
 $font-family-heading: 'Georgia, -apple-system, "Nimbus Roman No9 L", "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "ST Heiti", sans-serif';
+
+// WebNavbar组件变量
+$web-navbar-bg: (
+  light: #7fb5eb,
+  dark: #1b3d5e,
+);
+
+$web-navbar-bg-active: (
+  light: #8aece7,
+  dark: #037d8d,
+);
+
+$web-navbar-border-active: (
+  light: #1eeed2,
+  dark: #1eeed2,
+);
+
+$web-navbar-color: (
+  light: #212222,
+  dark: #d3dddc,
+);
