@@ -12,15 +12,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: "标题",
+      default: "",
     },
     content: {
       type: String,
-      default: "内容",
+      default: "",
     },
     url: {
       type: String,
-      default: "跳转",
+      default: "",
     }
   },
   data(){

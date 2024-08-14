@@ -2,7 +2,7 @@
 title: post请求方式通过params传递参数
 date: 2018-07-03 14:14:35
 tags:
-  - JavaScript
+  - javascript
 ---
 
 在HTTP请求中，`POST` 方法通常用于向指定的资源提交要被处理的数据。

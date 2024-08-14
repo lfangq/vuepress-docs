@@ -2,7 +2,7 @@
 title:  this指向
 date: 2024-04-01 16:58:06
 tags:
-  - JavaScript
+  - javascript
 ---
 
 ### 1. 定义

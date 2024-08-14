@@ -9,3 +9,4 @@ bgImageStyle:
 heroFullScreen: true
 footer: false
 ---
+<!-- <LightPage /> -->
