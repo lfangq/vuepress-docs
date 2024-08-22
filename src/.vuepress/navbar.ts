@@ -55,6 +55,14 @@ export default navbar([
         text: "Element-UI小技巧",
         prefix: "/element-ui/",
         link: "/notes/element-ui.md"
+      },
+      {
+        text: "Vue.js",
+        link: "https://cn.vuejs.org/"
+      },
+      {
+        text: "React.js",
+        link: "https://zh-hans.react.dev/"
       }
     ]
   },
